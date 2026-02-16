@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer components {
+  .container {
+    @apply mx-auto px-4  max-w-32;
+  }
+  .button {
+    @apply bg-gray-700 text-white font-bold py-2 px-4  hover:bg-gray-800 ;
+  }
+   .hero {
+    background-image: url('/images/acting.jpeg');
+    @apply relative h-screen bg-cover bg-top;
+  }
+}
+@layer utilities {
+  .card {
+    @apply  grid gap-4 grid-cols-[repeat(auto-fit,minmax(500px,1fr))];
+  }
+}
+.logo {
+  font-family: 'Montserrat', sans-serif;
+}
