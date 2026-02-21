@@ -9,23 +9,13 @@ import {
 const Footer = () => {
   const items = [
     "News",
-    "Finally Enough Love",
-    "Music",
-    "Community",
-    "Ray of Light",
-    "Raising Malawi",
-    "Store US",
-    "Store UK",
+    "Contact",
+    "Video",
+    "About",
+
+    
   ];
 
-  const secondary = [
-    "Help",
-    "Newsletter",
-    "Terms and Conditions",
-    "Privacy Policy",
-    "Concert Tickets",
-    "Do Not Sell or Share My Personal Information",
-  ];
 
   return (
     <footer className="bg-black text-white">
@@ -35,7 +25,7 @@ const Footer = () => {
 
         {/* Brand */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-[0.25em] font-serif logo">
-          Jide PENIEL
+          JIDE PENIEL
         </h1>
 
         {/* Main Navigation */}
@@ -51,7 +41,7 @@ const Footer = () => {
           ))}
         </nav>
 
-        {/* Secondary Links */}
+        {/* Secondary Links
         <nav className="flex flex-wrap justify-center gap-x-4 gap-y-3 text-[10px] sm:text-xs uppercase tracking-widest text-red-600">
           {secondary.map((item) => (
             <a
@@ -62,7 +52,7 @@ const Footer = () => {
               {item}
             </a>
           ))}
-        </nav>
+        </nav> */}
 
         {/* Social Icons */}
         <div className="flex justify-center gap-5 sm:gap-6 pt-4">

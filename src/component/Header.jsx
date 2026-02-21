@@ -11,7 +11,7 @@ const Header = () => {
         <div className="flex items-center justify-between py-8">
 
           {/* Logo */}
-          <h1 className="text-2xl font-bold logo">Jide PENIEL</h1>
+          <h1 className="text-2xl font-bold logo">JIDE PENIEL</h1>
 
           {/* Desktop Menu */}
           <nav className="hidden md:block">
@@ -35,7 +35,7 @@ const Header = () => {
                 <FaXTwitter className="hover:text-gray-400 cursor-pointer" />
               </li>
               <li className="text-sm hover:text-gray-300 cursor-pointer">
-                RayLight Studio
+                ABOUT
               </li>
             </ul>
           </nav>
@@ -66,7 +66,7 @@ const Header = () => {
                 </a>
               </li>
               <li>X (Twitter)</li>
-              <li>RayLight Studio</li>
+              <li>About</li>
             </ul>
           </nav>
         )}
