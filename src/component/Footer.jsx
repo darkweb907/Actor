@@ -38,7 +38,15 @@ const Footer = () => {
               >
                 {item}
               </Link>
-            ): (
+            ):item === "About" ? (
+              <Link
+                key={item}
+                to="/about"
+                className="hover:text-gray-400 transition duration-300"
+              >
+                {item}
+              </Link>
+            ) : (
               <a
                 key={item}
                 href="#"
