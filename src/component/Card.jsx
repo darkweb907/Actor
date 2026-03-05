@@ -29,9 +29,6 @@ const Card = ({ details }) => {
                     {detail.work}
                   </h2>
 
-                  <p className="text-sm text-gray-300">
-                    {detail.desc}
-                  </p>
                 </div>
 
                 {/* Read More (Inside Card) */}
@@ -53,7 +50,7 @@ const Card = ({ details }) => {
         {/* View More (Outside Cards) */}
         <div className="text-center mt-14">
           <button className="bg-black text-white px-8 py-3 rounded-md hover:bg-red-600 transition duration-300">
-            View More
+            <NavLink to="/videos">View More</NavLink>
           </button>
         </div>
 

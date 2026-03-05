@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaFacebook, FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,13 +12,14 @@ const Header = () => {
         <div className="flex items-center justify-between py-8">
 
           {/* Logo */}
-          <h1 className="text-2xl font-bold logo">JIDE PENIEL</h1>
+          <h1 className="text-2xl font-bold logo">
+            <Link to="/">JIDE PENIEL</Link>
+          </h1>
 
           {/* Desktop Menu */}
           <nav className="hidden md:block">
             <ul className="flex gap-6 items-center">
-              <li className="hover:text-gray-300 cursor-pointer">SIGN UP</li>
-              <li className="hover:text-gray-300 cursor-pointer">LOG IN</li>
+             
               <li>
                 <a href="https://www.facebook.com/peniel.actors/" target="_blank" rel="noopener noreferrer">
                   <FaFacebook className="hover:text-blue-500" />
@@ -35,7 +37,10 @@ const Header = () => {
                 <FaXTwitter className="hover:text-gray-400 cursor-pointer" />
               </li>
               <li className="text-sm hover:text-gray-300 cursor-pointer">
-                ABOUT
+                <Link to="/about">ABOUT</Link>
+              </li>
+               <li className="hover:text-gray-300 cursor-pointer">
+                <Link to="/login"> Contact Me  </Link>
               </li>
             </ul>
           </nav>
@@ -52,8 +57,9 @@ const Header = () => {
         {isOpen && (
           <nav className="md:hidden pb-4">
             <ul className="flex flex-col gap-4">
-              <li className="hover:text-gray-300 cursor-pointer">SIGN UP</li>
-              <li className="hover:text-gray-300 cursor-pointer">LOG IN</li>
+              <li className="hover:text-gray-300 cursor-pointer">
+                <Link to="/login"> Contact Me  </Link>
+              </li>
               <li>
                 <a href="https://www.facebook.com/peniel.actors/" target="_blank" rel="noopener noreferrer">
                   Facebook
@@ -66,7 +72,9 @@ const Header = () => {
                 </a>
               </li>
               <li>X (Twitter)</li>
-              <li>About</li>
+              <li className="hover:text-gray-300 cursor-pointer">
+                <Link to="/about">ABOUT</Link>
+              </li>
             </ul>
           </nav>
         )}

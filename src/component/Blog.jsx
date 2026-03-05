@@ -1,17 +1,16 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
-function Blog({ details }) {
+function Project({ details }) {
   const { id } = useParams();
-  const blog = details.find((item) => item.id === Number(id));
+  const project = details.find((item) => item.id === Number(id));
 
-  if (!blog) {
-    return <div className="text-center py-20">Post not found</div>;
+  if (!project) {
+    return <div className="text-center py-20">Project not found</div>;
   }
 
   return (
     <div className="bg-gray-100 min-h-screen">
-
       {/* Container */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
 
@@ -25,9 +24,10 @@ function Blog({ details }) {
             lg:h-[75vh] 
             object-cover 
             object-center
+            rounded-lg
           "
-          src={blog.img}
-          alt={blog.work}
+          src={project.img}
+          alt={project.work}
         />
 
         {/* Content Wrapper */}
@@ -37,74 +37,24 @@ function Blog({ details }) {
           <h1 className="
             text-red-600 
             font-bold 
-            text-xl 
-            sm:text-2xl 
-            md:text-3xl 
+            text-2xl 
+            sm:text-3xl 
+            md:text-4xl 
             uppercase 
-            mb-3
+            mb-4
           ">
-            CONFESSIONS ON A DANCE FLOOR (THE SILVER COLLECTION) OUT MARCH 27
+            {project.work}
           </h1>
 
-          {/* Date */}
-          <p className="text-xs sm:text-sm text-gray-500 mb-6">
-            February 5, 2026
-          </p>
-
-          {/* Share */}
-          <p className="text-red-600 text-sm mb-8 cursor-pointer hover:underline">
-            Share
-          </p>
-
-          {/* Article */}
+          {/* Description */}
           <div className="
             text-gray-700 
-            text-sm 
-            sm:text-base 
+            text-base 
+            sm:text-lg 
             leading-7 
             space-y-6
           ">
-
-            <p>
-              (February 5, 2026 - Los Angeles, CA) For the first time ever,
-              the original continuous mix of Madonna’s critically acclaimed
-              album Confessions on a Dance Floor (The Silver Collection)
-              will be released on vinyl, available March 27.
-            </p>
-
-            <p>
-              Pressed on 2LP silver vinyl and carefully adapted to its
-              groundbreaking technical specifications, this highly regarded
-              version preserves the album's nonstop club flow as Madonna intended.
-            </p>
-
-            <p>
-              Madonna’s collaboration with producer Stuart Price transformed
-              her sound into sleek, disco-infused electropop that defined a
-              generation of dance music.
-            </p>
-
-            {/* Tracklist */}
-            <div>
-              <h2 className="font-semibold mt-8 mb-4 text-base sm:text-lg">
-                Confessions on a Dance Floor (The Silver Collection)
-              </h2>
-
-              <div className="space-y-6 text-sm sm:text-base">
-
-                {["A", "B", "C", "D"].map((side, index) => (
-                  <div key={side}>
-                    <h3 className="font-medium mb-2">Side {side}</h3>
-                    <ol className="list-decimal list-inside space-y-1">
-                      <li>Sample Track One</li>
-                      <li>Sample Track Two</li>
-                      <li>Sample Track Three</li>
-                    </ol>
-                  </div>
-                ))}
-
-              </div>
-            </div>
+            <p>{project.desc}</p>
           </div>
 
           {/* Back Link */}
@@ -113,7 +63,7 @@ function Blog({ details }) {
               to="/"
               className="text-red-600 text-sm hover:underline"
             >
-              ← Back to blog
+              ← Back to portfolio
             </Link>
           </div>
 
@@ -123,4 +73,4 @@ function Blog({ details }) {
   );
 }
 
-export default Blog;
+export default Project;
